@@ -70,7 +70,7 @@ LL_AUTO_STATIC_HOOK(
                  return args[0];
              }}
     };
-    auto res = expr::eval(climate_modify_config::Config::instance().factor, params, functions);
+    auto res = expr::eval(climate_modify_config::Config::instance().jaggedness, params, functions);
     return res[0];
 }
 
@@ -104,6 +104,6 @@ LL_AUTO_STATIC_HOOK(
                  return args[0];
              }}
     };
-    auto res = expr::eval(climate_modify_config::Config::instance().factor, params, functions);
+    auto res = expr::eval(climate_modify_config::Config::instance().offset, params, functions);
     return res[0];
 }
