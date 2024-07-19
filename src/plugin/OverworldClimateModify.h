@@ -2,14 +2,14 @@
 
 #include "ll/api/plugin/NativePlugin.h"
 
-namespace my_plugin {
+namespace overworld_climate_modify {
 
-class MyPlugin {
+class OverworldClimateModify {
 
 public:
-    static MyPlugin& getInstance();
+    static OverworldClimateModify& getInstance();
 
-    MyPlugin(ll::plugin::NativePlugin& self) : mSelf(self) {}
+    OverworldClimateModify(ll::plugin::NativePlugin& self) : mSelf(self) {}
 
     [[nodiscard]] ll::plugin::NativePlugin& getSelf() const { return mSelf; }
 
@@ -26,8 +26,11 @@ public:
     // /// @return True if the plugin is unloaded successfully.
     // bool unload();
 
+    std::filesystem::path getConfigDirPath();
+    std::filesystem::path getConfigFilePath();
+
 private:
     ll::plugin::NativePlugin& mSelf;
 };
 
-} // namespace my_plugin
+} // namespace overworld_climate_modify
